@@ -2,8 +2,13 @@ sequenceDiagram
     participant browser
     participant server
 
-    browser->>server: The POST request to the address https://studies.cs.helsinki.fi/exampleapp/notes  contains the new note as JSON data
+    browser->>server: POST request address new_note
     activate server
-    server-->>browser: The server responds with status code 201 create
+    server-->>browser: responds with HTTP status code 302
+    deactivate server
+
+    browser->>server: HTTP GET request to the address /notes
+    activate server
+    server-->>browser: HTML 
     deactivate server
 
