@@ -1,0 +1,8 @@
+sequenceDiagram
+    participant browser
+    participant server
+
+    browser->>server: The GET request to the address https://studies.cs.helsinki.fi/exampleapp/spa  contains the new note as JSON data
+    activate server
+    server-->>browser:  HTML document
+    deactivate server
