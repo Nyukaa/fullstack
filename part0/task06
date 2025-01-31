@@ -1,0 +1,4 @@
+browser->>server: The POST request to the address new_note_spa contains the new note as JSON data
+activate server
+server-->>browser: The server responds with status code 201 create
+deactivate server
